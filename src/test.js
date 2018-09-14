@@ -1,7 +1,9 @@
-import ExampleComponent from './'
+import React from 'react'
+import { shallow } from 'enzyme'
+import MyEditor from './'
 
-describe('ExampleComponent', () => {
-  it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+describe('MyEditor', () => {
+  it('renders without crashing', () => {
+    shallow(<MyEditor />)
   })
 })
