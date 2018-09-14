@@ -1,21 +1,26 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import { EditorState } from 'prosemirror-state'
+
+import ProseMirror from './ProseMirror'
 import styles from './styles.css'
 
 export default class MyEditor extends Component {
   static propTypes = {
-    text: PropTypes.string
+    editorState: PropTypes.instanceOf(EditorState).isRequired,
+    onEditorState: PropTypes.func.isRequired
   }
 
   render() {
-    const {
-      text
-    } = this.props
-
+    const {editorState, onEditorState} = this.props
     return (
-      <div className={styles.test}>
-        MyEditor: {text}
+      <div className={styles.myEditorWrapper}>
+        <ProseMirror
+          ref={this.onEditorView}
+          editorState={editorState}
+          onEditorState={onEditorState}
+        />
       </div>
     )
   }
