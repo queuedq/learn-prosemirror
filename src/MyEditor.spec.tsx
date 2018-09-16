@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import ProseMirror from './ProseMirror';
+import MyEditor from './MyEditor';
 import { EditorState } from 'prosemirror-state';
 
-describe('ProseMirror', () => {
+describe('MyEditor', () => {
   it('renders without crashing', () => {
-    shallow(<ProseMirror
+    shallow(<MyEditor
       editorState={new EditorState()}
       onChange={(editorState: EditorState) => { editorState; }}
     />);
