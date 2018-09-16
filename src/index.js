@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import { EditorState } from 'prosemirror-state'
 
 import ProseMirror from './ProseMirror'
-import styles from './styles.css'
 
 export default class MyEditor extends Component {
   static propTypes = {
@@ -15,7 +14,7 @@ export default class MyEditor extends Component {
   render() {
     const {editorState, onEditorState} = this.props
     return (
-      <div className={styles.myEditorWrapper}>
+      <div>
         <ProseMirror
           ref={this.onEditorView}
           editorState={editorState}
