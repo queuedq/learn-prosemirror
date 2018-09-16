@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+  - "lts/*"
+notifications:
+  email: false
+script:
+  - npm run lint
+  - npm run typescript
+  - npm run test
