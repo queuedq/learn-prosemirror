@@ -16,7 +16,7 @@ export default class App extends Component {
     }
   }
 
-  onEditorState = (editorState) => {
+  onChange = (editorState) => {
     this.setState({editorState})
   };
 
@@ -26,7 +26,7 @@ export default class App extends Component {
       <div>
         <MyEditor
           editorState={editorState}
-          onEditorState={this.onEditorState}
+          onChange={this.onChange}
         />
       </div>
     )
