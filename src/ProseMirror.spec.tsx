@@ -5,9 +5,11 @@ import { EditorState } from 'prosemirror-state';
 
 describe('ProseMirror', () => {
   it('renders without crashing', () => {
-    shallow(<ProseMirror
-      editorState={new EditorState()}
-      onChange={(editorState: EditorState) => { editorState; }}
-    />);
+    shallow(
+      <ProseMirror
+        editorState={new EditorState()}
+        onChange={(editorState: EditorState) => { return; }}
+      />,
+    );
   });
 });
