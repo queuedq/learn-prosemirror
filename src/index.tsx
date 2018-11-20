@@ -1,24 +1,20 @@
 import * as React from 'react';
 
-import { schema } from 'prosemirror-schema-basic';
 import { EditorState } from 'prosemirror-state';
 import { EditorView } from 'prosemirror-view';
 
-export default class Editor extends React.Component {
+interface Props {
+  state: EditorState;
+}
+
+export default class Editor extends React.Component<Props> {
   ref: React.RefObject<HTMLDivElement | null>;
-  editorState: EditorState;
   view: EditorView;
 
-  constructor(props: any) {
-    super(props);
-    this.ref = React.createRef();
-
-    this.editorState = EditorState.create({ schema });
-  }
-
   createView = (element: any) => {
+    console.log(this.props.state);
     this.view = new EditorView(element, {
-      state: this.editorState,
+      state: this.props.state,
       dispatchTransaction: this.dispatchTransaction,
     });
   }
@@ -33,10 +29,17 @@ export default class Editor extends React.Component {
     this.view.updateState(newState);
   }
 
+  logEditorState = () => {
+    console.log(this.view.state.doc.toJSON());
+  }
+
   render() {
     return (
       <div style={{border: '1px solid black'}}>
         <div ref={this.createView} />
+        <button type="button" onClick={this.logEditorState}>
+          Log editorState
+        </button>
       </div>
     );
   }
