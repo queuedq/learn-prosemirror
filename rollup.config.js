@@ -27,10 +27,10 @@ export default {
       modules: true
     }),
     url(),
-    resolve(),
     typescript({
       rollupCommonJSResolveHack: true
     }),
-    commonjs()
+    commonjs(),
+    resolve()
   ]
 }
