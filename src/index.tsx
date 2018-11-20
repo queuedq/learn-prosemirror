@@ -1,45 +1,34 @@
 import * as React from 'react';
 
+import { schema } from 'prosemirror-schema-basic';
 import { EditorState } from 'prosemirror-state';
-import { EditorView } from 'prosemirror-view';
+// import { DOMParser } from 'prosemirror-model';
+import Editor from './Editor';
 
-interface Props {
+export default class App extends React.Component {
   state: EditorState;
-}
 
-export default class Editor extends React.Component<Props> {
-  ref: React.RefObject<HTMLDivElement | null>;
-  view: EditorView;
-
-  createView = (element: any) => {
-    console.log(this.props.state);
-    this.view = new EditorView(element, {
-      state: this.props.state,
-      dispatchTransaction: this.dispatchTransaction,
+  constructor(props: any) {
+    super(props);
+    this.state = EditorState.create({
+      schema,
+      // doc: DOMParser.fromSchema(schema).parse(document.getElementById('content')),
+      // doc: schema.nodeFromJSON({
+      //   type: 'doc',
+      //   content: [
+      //     {
+      //       type: 'paragraph',
+      //       content: [{ type: 'text', text: 'asdf' }]
+      //     }
+      //   ]
+      // }),
     });
-  }
-
-  dispatchTransaction = (transaction: any) => {
-    console.log(transaction);
-    console.log(
-      'Document size went from', transaction.before.content.size,
-      'to', transaction.doc.content.size,
-    );
-    const newState = this.view.state.apply(transaction);
-    this.view.updateState(newState);
-  }
-
-  logEditorState = () => {
-    console.log(this.view.state.doc.toJSON());
   }
 
   render() {
     return (
-      <div style={{border: '1px solid black'}}>
-        <div ref={this.createView} />
-        <button type="button" onClick={this.logEditorState}>
-          Log editorState
-        </button>
+      <div>
+        <Editor state={this.state} />
       </div>
     );
   }
