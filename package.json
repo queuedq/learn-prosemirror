@@ -28,7 +28,9 @@
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0",
-    "prosemirror-state": "^1.2.2"
+    "prosemirror-schema-basic": "^1.0.0",
+    "prosemirror-state": "^1.2.2",
+    "prosemirror-view": "^1.5.2"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.14",
@@ -41,6 +43,14 @@
     "cross-env": "^5.1.4",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
+    "eslint": "^5.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-standard": "^3.1.0",
     "gh-pages": "^1.2.0",
     "jest": "^23.6.0",
     "prosemirror-schema-basic": "^1.0.0",
