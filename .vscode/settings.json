@@ -1,4 +1,0 @@
-{
-  "jest.pathToJest": "npm test --",
-  "eslint.enable": false
-}

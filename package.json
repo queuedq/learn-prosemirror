@@ -1,94 +1,19 @@
 {
   "name": "learn-prosemirror",
   "version": "1.0.0",
-  "description": "Learning ProseMirror library.",
-  "author": "queued37",
-  "license": "MIT",
-  "repository": "queued37/learn-prosemirror",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
+  "description": "> Learning ProseMirror library.",
+  "private": true,
   "scripts": {
-    "clean": "rm -rf dist .rpt2_cache",
-    "typescript": "tsc --noEmit",
-    "build": "rollup -c",
-    "start": "rollup -c -w",
-    "test": "jest",
-    "lint": "tslint --project tsconfig.json -c tslint.json",
-    "lint:fix": "tslint --project tsconfig.json -c tslint.json --fix",
-    "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "test": "npm --prefix lib run test"
   },
-  "peerDependencies": {
-    "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0",
-    "prosemirror-schema-basic": "^1.0.0",
-    "prosemirror-state": "^1.2.2",
-    "prosemirror-view": "^1.5.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queued37/learn-prosemirror.git"
   },
-  "devDependencies": {
-    "@types/enzyme": "^3.1.14",
-    "@types/enzyme-adapter-react-16": "^1.0.3",
-    "@types/jest": "^23.3.2",
-    "@types/prosemirror-state": "^1.2.0",
-    "@types/prosemirror-view": "^1.3.0",
-    "@types/react": "^16.4.14",
-    "@types/react-dom": "^16.0.7",
-    "cross-env": "^5.1.4",
-    "enzyme": "^3.6.0",
-    "enzyme-adapter-react-16": "^1.5.0",
-    "eslint": "^5.0.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-config-standard-react": "^6.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.0",
-    "eslint-plugin-react": "^7.10.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "gh-pages": "^1.2.0",
-    "jest": "^23.6.0",
-    "prosemirror-schema-basic": "^1.0.0",
-    "prosemirror-state": "^1.2.2",
-    "prosemirror-view": "^1.5.2",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1",
-    "rollup": "^0.64.1",
-    "rollup-plugin-babel": "^3.0.7",
-    "rollup-plugin-commonjs": "^9.1.3",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-typescript2": "^0.17.0",
-    "rollup-plugin-url": "^1.4.0",
-    "ts-jest": "^23.1.4",
-    "tslint": "^5.11.0",
-    "tslint-config-airbnb": "^5.11.0",
-    "tslint-react": "^3.6.0",
-    "typescript": "^3.0.3"
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/queued37/learn-prosemirror/issues"
   },
-  "files": [
-    "dist"
-  ],
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ],
-    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.ts"
-  },
-  "dependencies": {}
+  "homepage": "https://github.com/queued37/learn-prosemirror#readme"
 }
