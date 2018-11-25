@@ -5,6 +5,6 @@ node_js:
 notifications:
   email: false
 script:
-  - npm --prefix lib run lint
-  - npm --prefix lib run typescript
-  - npm --prefix lib run test
+  - npm --prefix packages/lib run lint
+  - npm --prefix packages/lib run typescript
+  - npm --prefix packages/lib run test

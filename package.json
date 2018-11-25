@@ -1,10 +1,12 @@
 {
   "name": "learn-prosemirror",
   "version": "1.0.0",
-  "description": "> Learning ProseMirror library.",
+  "description": "Learning ProseMirror library.",
   "private": true,
   "scripts": {
-    "test": "npm --prefix lib run test"
+    "test": "npm --prefix packages/lib run test",
+    "build": "npm --prefix packages/lib run build",
+    "bootstrap": "lerna bootstrap"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/queued37/learn-prosemirror/issues"
   },
-  "homepage": "https://github.com/queued37/learn-prosemirror#readme"
+  "homepage": "https://github.com/queued37/learn-prosemirror#readme",
+  "devDependencies": {
+    "lerna": "^3.4.3"
+  }
 }

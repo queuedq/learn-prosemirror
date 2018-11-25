@@ -5,11 +5,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "learn-prosemirror": "file:../lib",
+    "learn-prosemirror": "^1.0.0",
     "prop-types": "^15.6.2",
     "prosemirror-state": "^1.2.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "prosemirror-view": "^1.6.6",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
     "react-scripts": "^2.1.1"
   },
   "scripts": {
