@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { EditorState } from 'prosemirror-state'
 
-import { MyEditor, schema } from 'learn-prosemirror'
+import MyEditor, { schema } from 'learn-prosemirror'
 
 export default class App extends Component {
   constructor(props) {
