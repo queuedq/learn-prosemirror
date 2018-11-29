@@ -1,8 +1,6 @@
 import * as React from 'react';
-
 import { EditorState } from 'prosemirror-state';
-
-import MyEditor, { schema } from '../src';
+import MyEditor, { createState } from '../src';
 
 export default class App extends React.Component {
   state: {
@@ -13,12 +11,12 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      editorState: EditorState.create({ schema }),
+      editorState: createState(),
     };
   }
 
   onChange = (editorState: EditorState) => {
-    this.setState({editorState});
+    this.setState({ editorState });
   }
 
   render() {

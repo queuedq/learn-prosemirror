@@ -1,4 +1,4 @@
-import {Schema} from 'prosemirror-model';
+import { Schema } from 'prosemirror-model';
 
 const textSchema = new Schema({
   nodes: {
@@ -7,4 +7,4 @@ const textSchema = new Schema({
   },
 });
 
-export { textSchema as schema };
+export { textSchema };
