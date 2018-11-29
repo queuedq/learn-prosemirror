@@ -15,15 +15,15 @@
   "scripts": {
     "clean": "rm -rf dist .rpt2_cache",
     "typescript": "tsc --noEmit",
+    "start": "webpack-dev-server",
     "build": "rollup -c",
-    "start": "rollup -c -w",
-    "example": "webpack-dev-server",
+    "build:example": "webpack",
     "test": "jest",
     "lint": "tslint --project tsconfig.json -c tslint.json",
     "lint:fix": "tslint --project tsconfig.json -c tslint.json --fix",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "predeploy": "npm run build:example",
+    "deploy": "gh-pages -d example/dist"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",

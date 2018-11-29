@@ -6,5 +6,6 @@ notifications:
   email: false
 script:
   - npm run lint
-  - npm run typescript
   - npm run test
+  - npm run build
+  - npm run build:example
