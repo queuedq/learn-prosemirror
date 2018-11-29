@@ -23,7 +23,7 @@
     "node_modules",
     "build",
     "dist",
-    "example",
+    "example/dist",
     "rollup.config.js",
     "src/**/*.spec.*"
   ]
